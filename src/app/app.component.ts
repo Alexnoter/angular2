@@ -4,8 +4,11 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'base';
+  public title: string = 'Mi Primera App de Angular';
+
 }
+
+
