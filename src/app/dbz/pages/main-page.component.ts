@@ -22,5 +22,13 @@ export class MainPageComponent {
   }
 ];
 
+  onNewCharacter( character: Character ):void {
+    this.characters.push(character);
+  }
+
+  onDeleteCharacter( character: number ):void {
+    this.characters.splice(character,1);
+  }
+
 }
 
