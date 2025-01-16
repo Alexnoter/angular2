@@ -24,7 +24,8 @@ export class DbzService {
 
   ];
 
-  onNewCharacter( character: Character ):void {
+  addCharacter( character: Character ):void {
+    //aca dice que tome todas las propiedades y las esparsa en caracteres
     const newCharacter: Character = { id: uuid(), ...character }
     this.characters.push(newCharacter);
     console.log(this.characters);
@@ -32,5 +33,9 @@ export class DbzService {
 
   onDeleteCharacter( character: number ):void {
     this.characters.splice(character,1);
+  }
+
+  deleteCharacterById( id: string ) {
+    this.characters = this.characters.filter( character => character.id !== id );
   }
 }
